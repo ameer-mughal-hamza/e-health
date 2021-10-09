@@ -1,30 +1,24 @@
-<div class="container-fluid">
-  <div class="custom-card">
-    <div class="form-group">
-      <input
-        type="email"
-        placeholder="Enter email address"
-        class="form-control"
-      />
+<section class="online-booking pt-115 pb-120">
+  <div class="container">
+    <div class="row justify-content-around">
+      <div class="col-xl-5 col-lg-6">
+        <div class="inner-booking-wrap">
+          <div class="booking-title mb-35">
+            <h4>Login</h4>
+          </div>
+          <form action="#" class="inner-booking-form">
+            <div class="info-box p-relative mb-20">
+              <i class="far fa-user-alt"></i>
+              <input type="text" placeholder="Email" />
+            </div>
+            <div class="info-box p-relative mb-20">
+              <i class="fal fa-lock"></i>
+              <input type="email" placeholder="Password" />
+            </div>
+            <button class="btn btn-block">Login</button>
+          </form>
+        </div>
+      </div>
     </div>
-
-    <div class="form-group">
-      <input
-        type="password"
-        placeholder="Enter password"
-        class="form-control"
-      />
-    </div>
-
-    <button class="btn btn-block btn-primary">Login</button>
-
-    <p class="horizontal-line-text">
-      <span>or</span>
-    </p>
-
-    <button class="btn btn-block google-sign-in" (click)="signInHandler()">
-      <img [src]="'assets/images/google.svg'" alt="google" />
-      <span>Continue with Google</span>
-    </button>
   </div>
-</div>
+</section>

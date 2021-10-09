@@ -1,0 +1,25 @@
+.btn {
+	-moz-user-select: none;
+	background: #ff8635;
+	border: medium none;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: 0;
+	line-height: 1;
+	margin-bottom: 0;
+	padding: 20px 40px;
+	text-align: center;
+	text-transform: capitalize;
+	touch-action: manipulation;
+	transition: all 0.3s ease 0s;
+	vertical-align: middle;
+	position: relative;
+	white-space: nowrap;
+	padding-right: 55px;
+	overflow: hidden;
+	z-index: 1;
+}
