@@ -18,11 +18,15 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  signInHandler(): void {
+  googleSignInHandler(): void {
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID).then((data) => {
       localStorage.setItem('google_auth', JSON.stringify(data));
       this.router.navigateByUrl('/dashboard').then();
     });
+  }
+
+  fbSignInHandler(): void {
+    // TODO: Add facebook login
   }
 
 }
