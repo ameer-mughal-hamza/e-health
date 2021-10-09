@@ -1,0 +1,10 @@
+.subscribe-form button {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: #ff8635;
+	border-radius: 50px;
+	padding: 24px 40px;
+	padding-right: 55px;
+}
