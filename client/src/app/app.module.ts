@@ -11,6 +11,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { SliderAreaComponent } from './home/slider-area/slider-area.component';
 import { ServicesAreaComponent } from './services-area/services-area.component';
 import { MapsComponent } from './maps/maps.component';
+import { GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from 'angularx-social-login';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,30 @@ import { MapsComponent } from './maps/maps.component';
     AboutUsComponent,
     SliderAreaComponent,
     ServicesAreaComponent,
-    MapsComponent
+    MapsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
+    SocialLoginModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '763824783116-ufs1pflejasvpuplf9iet5tvr9332onu.apps.googleusercontent.com'
+            )
+          }
+        ]
+      } as SocialAuthServiceConfig
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
